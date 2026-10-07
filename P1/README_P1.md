@@ -5,9 +5,11 @@
 | Miembro | Nombre y apellidos |
 |---|---|
 | Alumno 1 | Adrián Martínez Zamora |
-| Alumno 2 | Pendiente de incorporación |
+| Alumno 2 | Sin incorporar; trabajo individual por ahora |
 
 **Nombre provisional del proyecto Eclipse:** `P1_AMZ`
+
+El enunciado exige dos integrantes y commits propios de ambos. Como todavía no hay segundo integrante, ese requisito de la entrega queda pendiente de acordar con el profesorado. Si se incorpora otra persona, habrá que adaptar el nombre del proyecto y las evidencias para que las dos capturas y la carpeta del proyecto coincidan.
 
 ## 2. Análisis inicial
 
@@ -51,7 +53,7 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Localización inicial:** `src/main/java/juego/geometria/Direccion.java`, línea 21.  
 **Responsable:** Adrián Martínez Zamora.  
-**Commit:** `P1 - S2119 - Reutilizar generador aleatorio`.
+**Commit:** [da24fab](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/da24fab7672fb45a973af7fb6105a0bccd231fea).
 
 **Problema detectado.** `aleatoria()` creaba un `Random` nuevo en cada llamada, con un coste innecesario y una secuencia potencialmente menos aleatoria.
 
@@ -61,7 +63,7 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Localización inicial:** `src/main/java/juego/geometria/Direccion.java`, línea 19.  
 **Responsable:** Adrián Martínez Zamora.  
-**Commit:** `P1 - S1197 - Corregir declaración del arreglo de direcciones`.
+**Commit:** [36044de](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/36044dec2aedebd402cf98336e3e7f7081731ce6).
 
 **Problema detectado.** Los corchetes del arreglo estaban junto al nombre `arrayDirecciones` en lugar de junto al tipo.
 
@@ -71,7 +73,7 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Localización inicial:** `src/main/java/juego/pruebas/Programa.java`, línea 20.  
 **Responsable:** Adrián Martínez Zamora.  
-**Commit:** `P1 - S106 - Sustituir salida estándar por registrador`.
+**Commit:** [886e2de](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/886e2def0f3fc2428e92a9f643ab4b200fd71ceb).
 
 **Problema detectado.** El programa escribía directamente en `System.out`, sin el control de niveles y destinos que ofrece un registrador.
 
@@ -81,7 +83,7 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Localización inicial:** `src/main/java/juego/pruebas/Programa.java`, línea 16.  
 **Responsable:** Adrián Martínez Zamora.  
-**Commit:** `P1 - S2201 - Conservar el resultado de la concatenación`.
+**Commit:** [17fa9a3](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/17fa9a32d5c3eb000a2378721cebc4c605db5869).
 
 **Problema detectado.** `String.concat` devuelve una cadena nueva, pero el código descartaba ese resultado. Además, el arreglo tenía una posición `null` que produciría una excepción al recorrerlo.
 
@@ -91,7 +93,7 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Localización inicial:** `src/main/java/juego/pruebas/Programa.java`, línea 10.  
 **Responsable:** Adrián Martínez Zamora.  
-**Commit:** `P1 - S1197 - Corregir declaración del arreglo de puntos`.
+**Commit:** [1c4cd3b](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/1c4cd3be4b7a63ca5476fe59940aeb852eb9cba2).
 
 **Problema detectado.** Los corchetes del arreglo estaban junto al nombre `puntos`.
 
@@ -101,7 +103,7 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Localización inicial:** `src/main/java/juego/pruebas/Programa.java`, línea 7.  
 **Responsable:** Adrián Martínez Zamora.  
-**Commit:** `P1 - S1197 - Corregir declaración de argumentos`.
+**Commit:** [7aabe61](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/7aabe612dc78fbfddff894a7350f90c353608951).
 
 **Problema detectado.** `main` declaraba los argumentos como `String args[]`, con los corchetes junto al nombre de la variable.
 
@@ -111,7 +113,7 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Localización inicial:** `src/main/java/juego/pruebas/Programa.java`, línea 18.  
 **Responsable:** Adrián Martínez Zamora.  
-**Commit:** `P1 - S4973 - Comprobar si la cadena está vacía`.
+**Commit:** [74d809c](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/74d809c473a64359a3a3067e9e9681e948d05112).
 
 **Problema detectado.** `info == ""` comparaba referencias de objetos, no el contenido de la cadena.
 
@@ -121,7 +123,7 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Localización inicial:** `src/main/java/juego/geometria/Punto.java`, línea 4.  
 **Responsable:** Adrián Martínez Zamora.  
-**Commit:** `P1 - S1128 - Eliminar importación de Random sin uso`.
+**Commit:** [41a6d12](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/41a6d126e2020898f69efb9570163dedeb07562f).
 
 **Problema detectado.** `Punto` importaba `java.util.Random` sin utilizarlo.
 
@@ -131,7 +133,7 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Localización inicial:** `src/main/java/juego/geometria/Punto.java`, línea 145.  
 **Responsable:** Adrián Martínez Zamora.  
-**Commit:** `P1 - S2975 S108 S2225 - Usar constructor de copia en Punto`.
+**Commit:** [01a8990](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/01a89902fc3b09303af068823a16365daf63758f).
 
 **Problema detectado.** `clone()` podía devolver `null`, en contra de lo esperado para un método de copia.
 
@@ -141,7 +143,7 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Localización inicial:** `src/main/java/juego/geometria/Punto.java`, línea 143.  
 **Responsable:** Adrián Martínez Zamora.  
-**Commit:** `P1 - S2975 S108 S2225 - Usar constructor de copia en Punto`.
+**Commit:** [01a8990](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/01a89902fc3b09303af068823a16365daf63758f).
 
 **Problema detectado.** El `catch (CloneNotSupportedException e)` estaba vacío y ocultaba el fallo.
 
@@ -151,7 +153,7 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Localización inicial:** `src/main/java/juego/geometria/Punto.java`, línea 136.  
 **Responsable:** Adrián Martínez Zamora.  
-**Commit:** `P1 - S2975 S108 S2225 - Usar constructor de copia en Punto`.
+**Commit:** [01a8990](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/01a89902fc3b09303af068823a16365daf63758f).
 
 **Problema detectado.** Una clase inmutable con constructor de copia implementaba un `clone()` basado en `super.clone()` pese a no admitir esa operación correctamente.
 
@@ -161,7 +163,7 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Localización inicial:** `src/main/java/juego/geometria/Punto.java`, línea 130.  
 **Responsable:** Adrián Martínez Zamora.  
-**Commit:** `P1 - S1905 - Eliminar conversión redundante en equals`.
+**Commit:** [86bc41e](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/86bc41eef0f61aa108846a89c70be5733fa6f931).
 
 **Problema detectado.** El parámetro de `equals(Punto)` ya era un `Punto`, por lo que convertirlo de nuevo a ese tipo no tenía efecto.
 
@@ -171,7 +173,7 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Localización inicial:** `src/main/java/juego/geometria/Punto.java`, línea 126.  
 **Responsable:** Adrián Martínez Zamora.  
-**Commit:** `P1 - S1201 - Implementar igualdad y hashCode de Punto`.
+**Commit:** [ca71627](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/ca71627a99879906cec9a881b106276d3787146b).
 
 **Problema detectado.** `equals(Punto)` no sobrescribía `Object.equals(Object)` y podía dar resultados distintos según el tipo estático de la referencia.
 
@@ -181,7 +183,7 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Localización inicial:** `src/main/java/juego/geometria/Punto.java`, línea 82.  
 **Responsable:** Adrián Martínez Zamora.  
-**Commit:** `P1 - S100 - Renombrar situacionRelativa`.
+**Commit:** [e956ab7](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/e956ab708a40fec6c3af0f0f637351a566be8b2d).
 
 **Problema detectado.** El nombre `situacion_relativa` no seguía la convención de nombres de métodos Java.
 
@@ -191,7 +193,7 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Localización inicial:** `src/main/java/juego/geometria/Punto.java`, línea 51.  
 **Responsable:** Adrián Martínez Zamora.  
-**Commit:** `P1 - S100 - Renombrar adyacente y su llamada`.
+**Commit:** [aa46c04](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/aa46c0462d0f819d14c353d2f6c5ccd1706953be).
 
 **Problema detectado.** El método `Adyacente` comenzaba con mayúscula y no seguía la convención de nombres de métodos Java.
 
@@ -201,7 +203,7 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Localización inicial:** `src/main/java/juego/geometria/Punto.java`, línea 11.  
 **Responsable:** Adrián Martínez Zamora.  
-**Commit:** `P1 - S1124 - Ordenar modificadores de la constante`.
+**Commit:** [5d63bcf](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/5d63bcf4eea3b767e639b89c7e8ee6cbd39977f5).
 
 **Problema detectado.** La declaración de `defaultValue` usaba `public final static`, fuera del orden habitual de Java.
 
@@ -211,7 +213,7 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Localización inicial:** `src/main/java/juego/geometria/Punto.java`, línea 11.  
 **Responsable:** Adrián Martínez Zamora.  
-**Commit:** `P1 - S115 - Renombrar constante DEFAULT_VALUE`.
+**Commit:** [d2ae809](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/d2ae8097d7334965172f595731e548f843f5eb8b).
 
 **Problema detectado.** La constante pública `defaultValue` no estaba escrita en mayúsculas con guiones bajos.
 
@@ -221,7 +223,7 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Localización inicial:** `src/main/java/juego/geometria/Punto.java`, línea 3.  
 **Responsable:** Adrián Martínez Zamora.  
-**Commit:** `P1 - S1128 - Eliminar importación implícita de Math`.
+**Commit:** [806a0c1](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/806a0c1776b20dae47ad8b1338f9c3a22e0ce0c5).
 
 **Problema detectado.** Se importaba `java.lang.Math`, aunque los tipos de `java.lang` se importan implícitamente.
 
@@ -231,7 +233,7 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Localización inicial:** `src/main/java/juego/geometria/Punto.java`, línea 116.  
 **Responsable:** Adrián Martínez Zamora.  
-**Commit:** `P1 - S1144 S2184 - Eliminar método distancia sin uso`.
+**Commit:** [ee79cdf](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/ee79cdfc46f874601138bcf751585be154db89d1).
 
 **Problema detectado.** `distancia` era un método privado sin llamadas en el proyecto.
 
@@ -241,7 +243,7 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Localización inicial:** `src/main/java/juego/geometria/Punto.java`, línea 117, resta de coordenadas X.  
 **Responsable:** Adrián Martínez Zamora.  
-**Commit:** `P1 - S1144 S2184 - Eliminar método distancia sin uso`.
+**Commit:** [ee79cdf](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/ee79cdfc46f874601138bcf751585be154db89d1).
 
 **Problema detectado.** La resta de enteros se efectuaba antes de convertir el resultado a `double`, con posibilidad de desbordamiento.
 
@@ -251,7 +253,7 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Localización inicial:** `src/main/java/juego/geometria/Punto.java`, línea 117, resta de coordenadas Y.  
 **Responsable:** Adrián Martínez Zamora.  
-**Commit:** `P1 - S1144 S2184 - Eliminar método distancia sin uso`.
+**Commit:** [ee79cdf](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/ee79cdfc46f874601138bcf751585be154db89d1).
 
 **Problema detectado.** La segunda resta de enteros tenía el mismo riesgo de desbordamiento.
 
@@ -261,7 +263,7 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Localización inicial:** `src/main/java/juego/geometria/circulo.java`, línea 10.  
 **Responsable:** Adrián Martínez Zamora.  
-**Commit:** `P1 - S1172 - Inicializar el centro del circulo`.
+**Commit:** [19a4d5b](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/19a4d5bd05b434c5af7ea8bfa98cf4662d7933d2).
 
 **Problema detectado.** El constructor recibía `centroIni` pero no lo almacenaba; `centro` quedaba en `null` y podía fallar al consultar o desplazar el círculo.
 
@@ -271,7 +273,7 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Localización inicial:** `src/main/java/juego/geometria/circulo.java`, línea 3.  
 **Responsable:** Adrián Martínez Zamora.  
-**Commit:** `P1 - S101 - Renombrar clase Circulo`.
+**Commit:** [f3dc5b9](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/f3dc5b9f4cbc6bbc74047144c90356000e22cfaa).
 
 **Problema detectado.** La clase pública `circulo` empezaba con minúscula y no seguía la convención de nombres de clases Java.
 
@@ -281,43 +283,47 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 | Nº | Regla Sonar | Responsable | Commit | Resultado |
 |---:|---|---|---|---|
-| 1 | `java:S2119` | Adrián Martínez Zamora | `P1 - S2119 - Reutilizar generador aleatorio` | Resuelta; 23 → 22 incidencias |
-| 2 | `java:S1197` | Adrián Martínez Zamora | `P1 - S1197 - Corregir declaración del arreglo de direcciones` | Resuelta; 22 → 21 incidencias |
-| 3 | `java:S106` | Adrián Martínez Zamora | `P1 - S106 - Sustituir salida estándar por registrador` | Resuelta; 21 → 20 incidencias |
-| 4 | `java:S2201` | Adrián Martínez Zamora | `P1 - S2201 - Conservar el resultado de la concatenación` | Resuelta; 20 → 19 incidencias |
-| 5 | `java:S1197` | Adrián Martínez Zamora | `P1 - S1197 - Corregir declaración del arreglo de puntos` | Resuelta; 19 → 18 incidencias |
-| 6 | `java:S1197` | Adrián Martínez Zamora | `P1 - S1197 - Corregir declaración de argumentos` | Resuelta; 18 → 17 incidencias |
-| 7 | `java:S4973` | Adrián Martínez Zamora | `P1 - S4973 - Comprobar si la cadena está vacía` | Resuelta; 17 → 16 incidencias |
-| 8 | `java:S1128` | Adrián Martínez Zamora | `P1 - S1128 - Eliminar importación de Random sin uso` | Resuelta; 16 → 15 incidencias |
-| 9 | `java:S2225` | Adrián Martínez Zamora | `P1 - S2975 S108 S2225 - Usar constructor de copia en Punto` | Resuelta; junto con 10 y 11 |
-| 10 | `java:S108` | Adrián Martínez Zamora | `P1 - S2975 S108 S2225 - Usar constructor de copia en Punto` | Resuelta; junto con 9 y 11 |
-| 11 | `java:S2975` | Adrián Martínez Zamora | `P1 - S2975 S108 S2225 - Usar constructor de copia en Punto` | Resuelta; 15 → 12 incidencias |
-| 12 | `java:S1905` | Adrián Martínez Zamora | `P1 - S1905 - Eliminar conversión redundante en equals` | Resuelta; 12 → 11 incidencias |
-| 13 | `java:S1201` | Adrián Martínez Zamora | `P1 - S1201 - Implementar igualdad y hashCode de Punto` | Resuelta; 11 → 10 incidencias |
-| 14 | `java:S100` | Adrián Martínez Zamora | `P1 - S100 - Renombrar situacionRelativa` | Resuelta; 10 → 9 incidencias |
-| 15 | `java:S100` | Adrián Martínez Zamora | `P1 - S100 - Renombrar adyacente y su llamada` | Resuelta; 9 → 8 incidencias |
-| 16 | `java:S1124` | Adrián Martínez Zamora | `P1 - S1124 - Ordenar modificadores de la constante` | Resuelta; 8 → 7 incidencias |
-| 17 | `java:S115` | Adrián Martínez Zamora | `P1 - S115 - Renombrar constante DEFAULT_VALUE` | Resuelta; 7 → 6 incidencias |
-| 18 | `java:S1128` | Adrián Martínez Zamora | `P1 - S1128 - Eliminar importación implícita de Math` | Resuelta; 6 → 5 incidencias |
-| 19 | `java:S1144` | Adrián Martínez Zamora | `P1 - S1144 S2184 - Eliminar método distancia sin uso` | Resuelta; junto con 20 y 21 |
-| 20 | `java:S2184` | Adrián Martínez Zamora | `P1 - S1144 S2184 - Eliminar método distancia sin uso` | Resuelta; junto con 19 y 21 |
-| 21 | `java:S2184` | Adrián Martínez Zamora | `P1 - S1144 S2184 - Eliminar método distancia sin uso` | Resuelta; 5 → 2 incidencias |
-| 22 | `java:S1172` | Adrián Martínez Zamora | `P1 - S1172 - Inicializar el centro del circulo` | Resuelta; 2 → 1 incidencia |
-| 23 | `java:S101` | Adrián Martínez Zamora | `P1 - S101 - Renombrar clase Circulo` | Resuelta; 1 → 0 incidencias |
+| 1 | `java:S2119` | Adrián Martínez Zamora | [da24fab](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/da24fab7672fb45a973af7fb6105a0bccd231fea) | Resuelta; 23 → 22 incidencias |
+| 2 | `java:S1197` | Adrián Martínez Zamora | [36044de](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/36044dec2aedebd402cf98336e3e7f7081731ce6) | Resuelta; 22 → 21 incidencias |
+| 3 | `java:S106` | Adrián Martínez Zamora | [886e2de](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/886e2def0f3fc2428e92a9f643ab4b200fd71ceb) | Resuelta; 21 → 20 incidencias |
+| 4 | `java:S2201` | Adrián Martínez Zamora | [17fa9a3](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/17fa9a32d5c3eb000a2378721cebc4c605db5869) | Resuelta; 20 → 19 incidencias |
+| 5 | `java:S1197` | Adrián Martínez Zamora | [1c4cd3b](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/1c4cd3be4b7a63ca5476fe59940aeb852eb9cba2) | Resuelta; 19 → 18 incidencias |
+| 6 | `java:S1197` | Adrián Martínez Zamora | [7aabe61](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/7aabe612dc78fbfddff894a7350f90c353608951) | Resuelta; 18 → 17 incidencias |
+| 7 | `java:S4973` | Adrián Martínez Zamora | [74d809c](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/74d809c473a64359a3a3067e9e9681e948d05112) | Resuelta; 17 → 16 incidencias |
+| 8 | `java:S1128` | Adrián Martínez Zamora | [41a6d12](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/41a6d126e2020898f69efb9570163dedeb07562f) | Resuelta; 16 → 15 incidencias |
+| 9 | `java:S2225` | Adrián Martínez Zamora | [01a8990](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/01a89902fc3b09303af068823a16365daf63758f) | Resuelta; junto con 10 y 11 |
+| 10 | `java:S108` | Adrián Martínez Zamora | [01a8990](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/01a89902fc3b09303af068823a16365daf63758f) | Resuelta; junto con 9 y 11 |
+| 11 | `java:S2975` | Adrián Martínez Zamora | [01a8990](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/01a89902fc3b09303af068823a16365daf63758f) | Resuelta; 15 → 12 incidencias |
+| 12 | `java:S1905` | Adrián Martínez Zamora | [86bc41e](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/86bc41eef0f61aa108846a89c70be5733fa6f931) | Resuelta; 12 → 11 incidencias |
+| 13 | `java:S1201` | Adrián Martínez Zamora | [ca71627](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/ca71627a99879906cec9a881b106276d3787146b) | Resuelta; 11 → 10 incidencias |
+| 14 | `java:S100` | Adrián Martínez Zamora | [e956ab7](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/e956ab708a40fec6c3af0f0f637351a566be8b2d) | Resuelta; 10 → 9 incidencias |
+| 15 | `java:S100` | Adrián Martínez Zamora | [aa46c04](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/aa46c0462d0f819d14c353d2f6c5ccd1706953be) | Resuelta; 9 → 8 incidencias |
+| 16 | `java:S1124` | Adrián Martínez Zamora | [5d63bcf](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/5d63bcf4eea3b767e639b89c7e8ee6cbd39977f5) | Resuelta; 8 → 7 incidencias |
+| 17 | `java:S115` | Adrián Martínez Zamora | [d2ae809](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/d2ae8097d7334965172f595731e548f843f5eb8b) | Resuelta; 7 → 6 incidencias |
+| 18 | `java:S1128` | Adrián Martínez Zamora | [806a0c1](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/806a0c1776b20dae47ad8b1338f9c3a22e0ce0c5) | Resuelta; 6 → 5 incidencias |
+| 19 | `java:S1144` | Adrián Martínez Zamora | [ee79cdf](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/ee79cdfc46f874601138bcf751585be154db89d1) | Resuelta; junto con 20 y 21 |
+| 20 | `java:S2184` | Adrián Martínez Zamora | [ee79cdf](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/ee79cdfc46f874601138bcf751585be154db89d1) | Resuelta; junto con 19 y 21 |
+| 21 | `java:S2184` | Adrián Martínez Zamora | [ee79cdf](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/ee79cdfc46f874601138bcf751585be154db89d1) | Resuelta; 5 → 2 incidencias |
+| 22 | `java:S1172` | Adrián Martínez Zamora | [19a4d5b](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/19a4d5bd05b434c5af7ea8bfa98cf4662d7933d2) | Resuelta; 2 → 1 incidencia |
+| 23 | `java:S101` | Adrián Martínez Zamora | [f3dc5b9](https://github.com/adrimmz04/CalSo-Pr-cticas/commit/f3dc5b9f4cbc6bbc74047144c90356000e22cfaa) | Resuelta; 1 → 0 incidencias |
 
 ## 6. Análisis final
 
-Pendiente de realizar sobre el proyecto completo y de añadir `imagenes/sonar_final.png`.
+Tras todas las correcciones, el 7 de octubre de 2026 se volvió a ejecutar **SonarQube > Analyze** sobre el proyecto completo `P1_AMZ`, en el mismo modo local y con las mismas reglas predeterminadas. El informe final muestra **0 incidencias** en los cuatro archivos Java.
+
+![Análisis final de SonarQube for Eclipse sin incidencias](imagenes/sonar_final.png)
 
 ## 7. Proyecto final
 
-El proyecto Eclipse se encuentra en `P1/proyecto/P1_AMZ/`. Su código Java aún conserva el estado de partida.
+El proyecto Eclipse final se encuentra en `P1/proyecto/P1_AMZ/`. Es un proyecto Java estándar, sin `pom.xml`. Los cuatro archivos Java corresponden al análisis final de la captura.
+
+Se compiló con `javac --release 17`. Se ejecutó `juego.pruebas.Programa` y se comprobó el centro inicial y el desplazamiento de `Circulo`, así como la igualdad y el `hashCode` de `Punto`.
 
 ## 8. Comprobación de la entrega
 
 - [ ] Confirmar la composición del grupo y el nombre definitivo del proyecto antes de la captura inicial.
 - [x] Incorporar la captura y todas las disconformidades del análisis inicial.
-- [ ] Resolver, documentar y comprobar cada disconformidad con un commit independiente cuando corresponda.
-- [ ] Incorporar la captura del análisis final del mismo proyecto sin disconformidades.
-- [ ] Verificar que el proyecto final compila y coincide con el analizado.
+- [x] Resolver, documentar y comprobar cada disconformidad con un commit independiente cuando corresponda.
+- [x] Incorporar la captura del análisis final del mismo proyecto sin disconformidades.
+- [x] Verificar que el proyecto final compila y coincide con el analizado.
 - [ ] Comprobar la autoría y la participación exigidas en el historial de `main`.
