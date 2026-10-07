@@ -177,6 +177,16 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Solución adoptada.** Se sobrescribió `equals(Object)`, se comprobó el tipo de forma segura y se añadió un `hashCode()` coherente con las coordenadas comparadas. El análisis completo mostró 10 incidencias, sin avisos nuevos.
 
+### Disconformidad 14 — `java:S100`
+
+**Localización inicial:** `src/main/java/juego/geometria/Punto.java`, línea 82.  
+**Responsable:** Adrián Martínez Zamora.  
+**Commit:** `P1 - S100 - Renombrar situacionRelativa`.
+
+**Problema detectado.** El nombre `situacion_relativa` no seguía la convención de nombres de métodos Java.
+
+**Solución adoptada.** Se renombró a `situacionRelativa`; no existían llamadas que actualizar. El análisis completo mostró 9 incidencias, sin avisos nuevos.
+
 Las demás soluciones se incorporarán tras comprobar cada corrección.
 
 ## 5. Resumen de las correcciones
@@ -196,6 +206,7 @@ Las demás soluciones se incorporarán tras comprobar cada corrección.
 | 11 | `java:S2975` | Adrián Martínez Zamora | `P1 - S2975 S108 S2225 - Usar constructor de copia en Punto` | Resuelta; 15 → 12 incidencias |
 | 12 | `java:S1905` | Adrián Martínez Zamora | `P1 - S1905 - Eliminar conversión redundante en equals` | Resuelta; 12 → 11 incidencias |
 | 13 | `java:S1201` | Adrián Martínez Zamora | `P1 - S1201 - Implementar igualdad y hashCode de Punto` | Resuelta; 11 → 10 incidencias |
+| 14 | `java:S100` | Adrián Martínez Zamora | `P1 - S100 - Renombrar situacionRelativa` | Resuelta; 10 → 9 incidencias |
 
 ## 6. Análisis final
 
