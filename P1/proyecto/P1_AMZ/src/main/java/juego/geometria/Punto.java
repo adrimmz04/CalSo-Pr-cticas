@@ -131,18 +131,5 @@ public class Punto {
 		return  (x == other.x && y == other.y);
 	}
 
-	@Override
-	public Punto clone(){
-		Punto copia;
-
-		try{
-			copia = (Punto)super.clone();
-			return copia;
-		}
-		catch(CloneNotSupportedException e){ }
-
-		return null;
-	}
-
 }
 

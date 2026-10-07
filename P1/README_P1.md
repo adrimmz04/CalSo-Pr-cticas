@@ -127,6 +127,36 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Solución adoptada.** Se eliminó esa importación. El análisis completo mostró 15 incidencias, sin avisos nuevos.
 
+### Disconformidad 9 — `java:S2225`
+
+**Localización inicial:** `src/main/java/juego/geometria/Punto.java`, línea 145.  
+**Responsable:** Adrián Martínez Zamora.  
+**Commit:** `P1 - S2975 S108 S2225 - Usar constructor de copia en Punto`.
+
+**Problema detectado.** `clone()` podía devolver `null`, en contra de lo esperado para un método de copia.
+
+**Solución adoptada.** Se eliminó el método `clone()` defectuoso. La clase ya ofrece `Punto(Punto otra)` para crear copias. No había llamadas a `clone()` en el proyecto.
+
+### Disconformidad 10 — `java:S108`
+
+**Localización inicial:** `src/main/java/juego/geometria/Punto.java`, línea 143.  
+**Responsable:** Adrián Martínez Zamora.  
+**Commit:** `P1 - S2975 S108 S2225 - Usar constructor de copia en Punto`.
+
+**Problema detectado.** El `catch (CloneNotSupportedException e)` estaba vacío y ocultaba el fallo.
+
+**Solución adoptada.** La eliminación del mismo `clone()` quitó el bloque vacío. Es la misma modificación atómica que resuelve las disconformidades 9 y 11.
+
+### Disconformidad 11 — `java:S2975`
+
+**Localización inicial:** `src/main/java/juego/geometria/Punto.java`, línea 136.  
+**Responsable:** Adrián Martínez Zamora.  
+**Commit:** `P1 - S2975 S108 S2225 - Usar constructor de copia en Punto`.
+
+**Problema detectado.** Una clase inmutable con constructor de copia implementaba un `clone()` basado en `super.clone()` pese a no admitir esa operación correctamente.
+
+**Solución adoptada.** Se conservó el constructor de copia y se retiró `clone()` completo. El análisis del proyecto pasó de 15 a 12 incidencias, sin avisos nuevos. Las tres disconformidades procedían del mismo método y desaparecieron juntas.
+
 Las demás soluciones se incorporarán tras comprobar cada corrección.
 
 ## 5. Resumen de las correcciones
@@ -141,6 +171,9 @@ Las demás soluciones se incorporarán tras comprobar cada corrección.
 | 6 | `java:S1197` | Adrián Martínez Zamora | `P1 - S1197 - Corregir declaración de argumentos` | Resuelta; 18 → 17 incidencias |
 | 7 | `java:S4973` | Adrián Martínez Zamora | `P1 - S4973 - Comprobar si la cadena está vacía` | Resuelta; 17 → 16 incidencias |
 | 8 | `java:S1128` | Adrián Martínez Zamora | `P1 - S1128 - Eliminar importación de Random sin uso` | Resuelta; 16 → 15 incidencias |
+| 9 | `java:S2225` | Adrián Martínez Zamora | `P1 - S2975 S108 S2225 - Usar constructor de copia en Punto` | Resuelta; junto con 10 y 11 |
+| 10 | `java:S108` | Adrián Martínez Zamora | `P1 - S2975 S108 S2225 - Usar constructor de copia en Punto` | Resuelta; junto con 9 y 11 |
+| 11 | `java:S2975` | Adrián Martínez Zamora | `P1 - S2975 S108 S2225 - Usar constructor de copia en Punto` | Resuelta; 15 → 12 incidencias |
 
 ## 6. Análisis final
 
