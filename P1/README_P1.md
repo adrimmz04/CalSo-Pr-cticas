@@ -47,12 +47,23 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 ## 4. Soluciones adoptadas
 
-Pendiente de documentar por separado cada disconformidad, su localización, el problema, la solución, el responsable y el commit.
+### Disconformidad 1 — `java:S2119`
+
+**Localización inicial:** `src/main/java/juego/geometria/Direccion.java`, línea 21.  
+**Responsable:** Adrián Martínez Zamora.  
+**Commit:** `P1 - S2119 - Reutilizar generador aleatorio`.
+
+**Problema detectado.** `aleatoria()` creaba un `Random` nuevo en cada llamada, con un coste innecesario y una secuencia potencialmente menos aleatoria.
+
+**Solución adoptada.** Se creó una única instancia `private static final Random RANDOM` en `Direccion` y el método la reutiliza. El nuevo análisis del proyecto completo mostró 22 incidencias: desapareció `java:S2119` y no aparecieron otras nuevas.
+
+Las demás soluciones se incorporarán tras comprobar cada corrección.
 
 ## 5. Resumen de las correcciones
 
 | Nº | Regla Sonar | Responsable | Commit | Resultado |
 |---:|---|---|---|---|
+| 1 | `java:S2119` | Adrián Martínez Zamora | `P1 - S2119 - Reutilizar generador aleatorio` | Resuelta; 23 → 22 incidencias |
 
 ## 6. Análisis final
 
