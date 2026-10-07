@@ -227,6 +227,36 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Solución adoptada.** Se eliminó la línea de importación sin cambiar las llamadas a `Math`. El análisis completo mostró 5 incidencias, sin avisos nuevos.
 
+### Disconformidad 19 — `java:S1144`
+
+**Localización inicial:** `src/main/java/juego/geometria/Punto.java`, línea 116.  
+**Responsable:** Adrián Martínez Zamora.  
+**Commit:** `P1 - S1144 S2184 - Eliminar método distancia sin uso`.
+
+**Problema detectado.** `distancia` era un método privado sin llamadas en el proyecto.
+
+**Solución adoptada.** Se eliminó el método completo. El enunciado admite retirar código muerto cuando esa es la causa de la disconformidad.
+
+### Disconformidad 20 — `java:S2184`
+
+**Localización inicial:** `src/main/java/juego/geometria/Punto.java`, línea 117, resta de coordenadas X.  
+**Responsable:** Adrián Martínez Zamora.  
+**Commit:** `P1 - S1144 S2184 - Eliminar método distancia sin uso`.
+
+**Problema detectado.** La resta de enteros se efectuaba antes de convertir el resultado a `double`, con posibilidad de desbordamiento.
+
+**Solución adoptada.** La expresión desapareció al retirar `distancia`, que no se utilizaba. No se mantuvo una operación defectuosa dentro de código muerto.
+
+### Disconformidad 21 — `java:S2184`
+
+**Localización inicial:** `src/main/java/juego/geometria/Punto.java`, línea 117, resta de coordenadas Y.  
+**Responsable:** Adrián Martínez Zamora.  
+**Commit:** `P1 - S1144 S2184 - Eliminar método distancia sin uso`.
+
+**Problema detectado.** La segunda resta de enteros tenía el mismo riesgo de desbordamiento.
+
+**Solución adoptada.** Ambas restas pertenecían exclusivamente al método privado sin uso. Su eliminación atómica resolvió las disconformidades 19, 20 y 21. El análisis completo pasó de 5 a 2 incidencias, sin avisos nuevos.
+
 Las demás soluciones se incorporarán tras comprobar cada corrección.
 
 ## 5. Resumen de las correcciones
@@ -251,6 +281,9 @@ Las demás soluciones se incorporarán tras comprobar cada corrección.
 | 16 | `java:S1124` | Adrián Martínez Zamora | `P1 - S1124 - Ordenar modificadores de la constante` | Resuelta; 8 → 7 incidencias |
 | 17 | `java:S115` | Adrián Martínez Zamora | `P1 - S115 - Renombrar constante DEFAULT_VALUE` | Resuelta; 7 → 6 incidencias |
 | 18 | `java:S1128` | Adrián Martínez Zamora | `P1 - S1128 - Eliminar importación implícita de Math` | Resuelta; 6 → 5 incidencias |
+| 19 | `java:S1144` | Adrián Martínez Zamora | `P1 - S1144 S2184 - Eliminar método distancia sin uso` | Resuelta; junto con 20 y 21 |
+| 20 | `java:S2184` | Adrián Martínez Zamora | `P1 - S1144 S2184 - Eliminar método distancia sin uso` | Resuelta; junto con 19 y 21 |
+| 21 | `java:S2184` | Adrián Martínez Zamora | `P1 - S1144 S2184 - Eliminar método distancia sin uso` | Resuelta; 5 → 2 incidencias |
 
 ## 6. Análisis final
 
