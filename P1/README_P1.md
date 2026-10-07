@@ -87,6 +87,16 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Solución adoptada.** Se asigna el resultado a `info` y se ignoran los elementos `null` del arreglo antes de llamar a `toString()`. El análisis completo mostró 19 incidencias, sin avisos nuevos.
 
+### Disconformidad 5 — `java:S1197`
+
+**Localización inicial:** `src/main/java/juego/pruebas/Programa.java`, línea 10.  
+**Responsable:** Adrián Martínez Zamora.  
+**Commit:** `P1 - S1197 - Corregir declaración del arreglo de puntos`.
+
+**Problema detectado.** Los corchetes del arreglo estaban junto al nombre `puntos`.
+
+**Solución adoptada.** Se declaró `Punto[] puntos`. El análisis completo mostró 18 incidencias, sin avisos nuevos.
+
 Las demás soluciones se incorporarán tras comprobar cada corrección.
 
 ## 5. Resumen de las correcciones
@@ -97,6 +107,7 @@ Las demás soluciones se incorporarán tras comprobar cada corrección.
 | 2 | `java:S1197` | Adrián Martínez Zamora | `P1 - S1197 - Corregir declaración del arreglo de direcciones` | Resuelta; 22 → 21 incidencias |
 | 3 | `java:S106` | Adrián Martínez Zamora | `P1 - S106 - Sustituir salida estándar por registrador` | Resuelta; 21 → 20 incidencias |
 | 4 | `java:S2201` | Adrián Martínez Zamora | `P1 - S2201 - Conservar el resultado de la concatenación` | Resuelta; 20 → 19 incidencias |
+| 5 | `java:S1197` | Adrián Martínez Zamora | `P1 - S1197 - Corregir declaración del arreglo de puntos` | Resuelta; 19 → 18 incidencias |
 
 ## 6. Análisis final
 
