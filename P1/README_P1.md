@@ -67,6 +67,16 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Solución adoptada.** Se cambió la declaración a `Direccion[] arrayDirecciones`. El nuevo análisis del proyecto completo mostró 21 incidencias: desapareció este aviso y no aparecieron otros nuevos.
 
+### Disconformidad 3 — `java:S106`
+
+**Localización inicial:** `src/main/java/juego/pruebas/Programa.java`, línea 20.  
+**Responsable:** Adrián Martínez Zamora.  
+**Commit:** `P1 - S106 - Sustituir salida estándar por registrador`.
+
+**Problema detectado.** El programa escribía directamente en `System.out`, sin el control de niveles y destinos que ofrece un registrador.
+
+**Solución adoptada.** Se incorporó un `Logger` de `java.util.logging` y se sustituyó `System.out.println(mensaje)` por `LOGGER.info(mensaje)`. El análisis completo mostró 20 incidencias, sin avisos nuevos.
+
 Las demás soluciones se incorporarán tras comprobar cada corrección.
 
 ## 5. Resumen de las correcciones
@@ -75,6 +85,7 @@ Las demás soluciones se incorporarán tras comprobar cada corrección.
 |---:|---|---|---|---|
 | 1 | `java:S2119` | Adrián Martínez Zamora | `P1 - S2119 - Reutilizar generador aleatorio` | Resuelta; 23 → 22 incidencias |
 | 2 | `java:S1197` | Adrián Martínez Zamora | `P1 - S1197 - Corregir declaración del arreglo de direcciones` | Resuelta; 22 → 21 incidencias |
+| 3 | `java:S106` | Adrián Martínez Zamora | `P1 - S106 - Sustituir salida estándar por registrador` | Resuelta; 21 → 20 incidencias |
 
 ## 6. Análisis final
 
