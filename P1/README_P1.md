@@ -117,6 +117,16 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Solución adoptada.** Se utilizó `info.isEmpty()`, que expresa directamente la condición buscada. El análisis completo mostró 16 incidencias, sin avisos nuevos.
 
+### Disconformidad 8 — `java:S1128`
+
+**Localización inicial:** `src/main/java/juego/geometria/Punto.java`, línea 4.  
+**Responsable:** Adrián Martínez Zamora.  
+**Commit:** `P1 - S1128 - Eliminar importación de Random sin uso`.
+
+**Problema detectado.** `Punto` importaba `java.util.Random` sin utilizarlo.
+
+**Solución adoptada.** Se eliminó esa importación. El análisis completo mostró 15 incidencias, sin avisos nuevos.
+
 Las demás soluciones se incorporarán tras comprobar cada corrección.
 
 ## 5. Resumen de las correcciones
@@ -130,6 +140,7 @@ Las demás soluciones se incorporarán tras comprobar cada corrección.
 | 5 | `java:S1197` | Adrián Martínez Zamora | `P1 - S1197 - Corregir declaración del arreglo de puntos` | Resuelta; 19 → 18 incidencias |
 | 6 | `java:S1197` | Adrián Martínez Zamora | `P1 - S1197 - Corregir declaración de argumentos` | Resuelta; 18 → 17 incidencias |
 | 7 | `java:S4973` | Adrián Martínez Zamora | `P1 - S4973 - Comprobar si la cadena está vacía` | Resuelta; 17 → 16 incidencias |
+| 8 | `java:S1128` | Adrián Martínez Zamora | `P1 - S1128 - Eliminar importación de Random sin uso` | Resuelta; 16 → 15 incidencias |
 
 ## 6. Análisis final
 
