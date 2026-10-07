@@ -207,6 +207,16 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Solución adoptada.** Se cambió a `public static final`. El análisis completo mostró 7 incidencias, sin avisos nuevos.
 
+### Disconformidad 17 — `java:S115`
+
+**Localización inicial:** `src/main/java/juego/geometria/Punto.java`, línea 11.  
+**Responsable:** Adrián Martínez Zamora.  
+**Commit:** `P1 - S115 - Renombrar constante DEFAULT_VALUE`.
+
+**Problema detectado.** La constante pública `defaultValue` no estaba escrita en mayúsculas con guiones bajos.
+
+**Solución adoptada.** Se renombró a `DEFAULT_VALUE`; no había referencias internas que actualizar. El análisis completo mostró 6 incidencias, sin avisos nuevos.
+
 Las demás soluciones se incorporarán tras comprobar cada corrección.
 
 ## 5. Resumen de las correcciones
@@ -229,6 +239,7 @@ Las demás soluciones se incorporarán tras comprobar cada corrección.
 | 14 | `java:S100` | Adrián Martínez Zamora | `P1 - S100 - Renombrar situacionRelativa` | Resuelta; 10 → 9 incidencias |
 | 15 | `java:S100` | Adrián Martínez Zamora | `P1 - S100 - Renombrar adyacente y su llamada` | Resuelta; 9 → 8 incidencias |
 | 16 | `java:S1124` | Adrián Martínez Zamora | `P1 - S1124 - Ordenar modificadores de la constante` | Resuelta; 8 → 7 incidencias |
+| 17 | `java:S115` | Adrián Martínez Zamora | `P1 - S115 - Renombrar constante DEFAULT_VALUE` | Resuelta; 7 → 6 incidencias |
 
 ## 6. Análisis final
 
