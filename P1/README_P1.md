@@ -267,7 +267,15 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Solución adoptada.** Se inicializa `centro` con una copia defensiva de `centroIni`. El análisis completo mostró una sola incidencia, sin avisos nuevos.
 
-La última solución se incorporará tras comprobar su corrección.
+### Disconformidad 23 — `java:S101`
+
+**Localización inicial:** `src/main/java/juego/geometria/circulo.java`, línea 3.  
+**Responsable:** Adrián Martínez Zamora.  
+**Commit:** `P1 - S101 - Renombrar clase Circulo`.
+
+**Problema detectado.** La clase pública `circulo` empezaba con minúscula y no seguía la convención de nombres de clases Java.
+
+**Solución adoptada.** Se renombraron la clase, el archivo y ambos constructores a `Circulo`. El análisis completo del mismo proyecto `P1_AMZ` mostró **0 incidencias**.
 
 ## 5. Resumen de las correcciones
 
@@ -295,6 +303,7 @@ La última solución se incorporará tras comprobar su corrección.
 | 20 | `java:S2184` | Adrián Martínez Zamora | `P1 - S1144 S2184 - Eliminar método distancia sin uso` | Resuelta; junto con 19 y 21 |
 | 21 | `java:S2184` | Adrián Martínez Zamora | `P1 - S1144 S2184 - Eliminar método distancia sin uso` | Resuelta; 5 → 2 incidencias |
 | 22 | `java:S1172` | Adrián Martínez Zamora | `P1 - S1172 - Inicializar el centro del circulo` | Resuelta; 2 → 1 incidencia |
+| 23 | `java:S101` | Adrián Martínez Zamora | `P1 - S101 - Renombrar clase Circulo` | Resuelta; 1 → 0 incidencias |
 
 ## 6. Análisis final
 
