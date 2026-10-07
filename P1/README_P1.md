@@ -217,6 +217,16 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Solución adoptada.** Se renombró a `DEFAULT_VALUE`; no había referencias internas que actualizar. El análisis completo mostró 6 incidencias, sin avisos nuevos.
 
+### Disconformidad 18 — `java:S1128`
+
+**Localización inicial:** `src/main/java/juego/geometria/Punto.java`, línea 3.  
+**Responsable:** Adrián Martínez Zamora.  
+**Commit:** `P1 - S1128 - Eliminar importación implícita de Math`.
+
+**Problema detectado.** Se importaba `java.lang.Math`, aunque los tipos de `java.lang` se importan implícitamente.
+
+**Solución adoptada.** Se eliminó la línea de importación sin cambiar las llamadas a `Math`. El análisis completo mostró 5 incidencias, sin avisos nuevos.
+
 Las demás soluciones se incorporarán tras comprobar cada corrección.
 
 ## 5. Resumen de las correcciones
@@ -240,6 +250,7 @@ Las demás soluciones se incorporarán tras comprobar cada corrección.
 | 15 | `java:S100` | Adrián Martínez Zamora | `P1 - S100 - Renombrar adyacente y su llamada` | Resuelta; 9 → 8 incidencias |
 | 16 | `java:S1124` | Adrián Martínez Zamora | `P1 - S1124 - Ordenar modificadores de la constante` | Resuelta; 8 → 7 incidencias |
 | 17 | `java:S115` | Adrián Martínez Zamora | `P1 - S115 - Renombrar constante DEFAULT_VALUE` | Resuelta; 7 → 6 incidencias |
+| 18 | `java:S1128` | Adrián Martínez Zamora | `P1 - S1128 - Eliminar importación implícita de Math` | Resuelta; 6 → 5 incidencias |
 
 ## 6. Análisis final
 
