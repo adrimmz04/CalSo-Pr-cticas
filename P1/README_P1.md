@@ -257,7 +257,17 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Solución adoptada.** Ambas restas pertenecían exclusivamente al método privado sin uso. Su eliminación atómica resolvió las disconformidades 19, 20 y 21. El análisis completo pasó de 5 a 2 incidencias, sin avisos nuevos.
 
-Las demás soluciones se incorporarán tras comprobar cada corrección.
+### Disconformidad 22 — `java:S1172`
+
+**Localización inicial:** `src/main/java/juego/geometria/circulo.java`, línea 10.  
+**Responsable:** Adrián Martínez Zamora.  
+**Commit:** `P1 - S1172 - Inicializar el centro del circulo`.
+
+**Problema detectado.** El constructor recibía `centroIni` pero no lo almacenaba; `centro` quedaba en `null` y podía fallar al consultar o desplazar el círculo.
+
+**Solución adoptada.** Se inicializa `centro` con una copia defensiva de `centroIni`. El análisis completo mostró una sola incidencia, sin avisos nuevos.
+
+La última solución se incorporará tras comprobar su corrección.
 
 ## 5. Resumen de las correcciones
 
@@ -284,6 +294,7 @@ Las demás soluciones se incorporarán tras comprobar cada corrección.
 | 19 | `java:S1144` | Adrián Martínez Zamora | `P1 - S1144 S2184 - Eliminar método distancia sin uso` | Resuelta; junto con 20 y 21 |
 | 20 | `java:S2184` | Adrián Martínez Zamora | `P1 - S1144 S2184 - Eliminar método distancia sin uso` | Resuelta; junto con 19 y 21 |
 | 21 | `java:S2184` | Adrián Martínez Zamora | `P1 - S1144 S2184 - Eliminar método distancia sin uso` | Resuelta; 5 → 2 incidencias |
+| 22 | `java:S1172` | Adrián Martínez Zamora | `P1 - S1172 - Inicializar el centro del circulo` | Resuelta; 2 → 1 incidencia |
 
 ## 6. Análisis final
 
