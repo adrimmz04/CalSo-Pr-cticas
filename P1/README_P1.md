@@ -97,6 +97,16 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Solución adoptada.** Se declaró `Punto[] puntos`. El análisis completo mostró 18 incidencias, sin avisos nuevos.
 
+### Disconformidad 6 — `java:S1197`
+
+**Localización inicial:** `src/main/java/juego/pruebas/Programa.java`, línea 7.  
+**Responsable:** Adrián Martínez Zamora.  
+**Commit:** `P1 - S1197 - Corregir declaración de argumentos`.
+
+**Problema detectado.** `main` declaraba los argumentos como `String args[]`, con los corchetes junto al nombre de la variable.
+
+**Solución adoptada.** Se cambió la firma a `main(String[] args)`. El análisis completo mostró 17 incidencias, sin avisos nuevos.
+
 Las demás soluciones se incorporarán tras comprobar cada corrección.
 
 ## 5. Resumen de las correcciones
@@ -108,6 +118,7 @@ Las demás soluciones se incorporarán tras comprobar cada corrección.
 | 3 | `java:S106` | Adrián Martínez Zamora | `P1 - S106 - Sustituir salida estándar por registrador` | Resuelta; 21 → 20 incidencias |
 | 4 | `java:S2201` | Adrián Martínez Zamora | `P1 - S2201 - Conservar el resultado de la concatenación` | Resuelta; 20 → 19 incidencias |
 | 5 | `java:S1197` | Adrián Martínez Zamora | `P1 - S1197 - Corregir declaración del arreglo de puntos` | Resuelta; 19 → 18 incidencias |
+| 6 | `java:S1197` | Adrián Martínez Zamora | `P1 - S1197 - Corregir declaración de argumentos` | Resuelta; 18 → 17 incidencias |
 
 ## 6. Análisis final
 
