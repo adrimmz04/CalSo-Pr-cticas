@@ -20,7 +20,7 @@ public class Programa {
           }
       }
 
-     String mensaje = (info == "") ? "no hay puntos" : info; 
+     String mensaje = info.isEmpty() ? "no hay puntos" : info; 
 
      LOGGER.info(mensaje);
     }

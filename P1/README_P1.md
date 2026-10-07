@@ -107,6 +107,16 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Solución adoptada.** Se cambió la firma a `main(String[] args)`. El análisis completo mostró 17 incidencias, sin avisos nuevos.
 
+### Disconformidad 7 — `java:S4973`
+
+**Localización inicial:** `src/main/java/juego/pruebas/Programa.java`, línea 18.  
+**Responsable:** Adrián Martínez Zamora.  
+**Commit:** `P1 - S4973 - Comprobar si la cadena está vacía`.
+
+**Problema detectado.** `info == ""` comparaba referencias de objetos, no el contenido de la cadena.
+
+**Solución adoptada.** Se utilizó `info.isEmpty()`, que expresa directamente la condición buscada. El análisis completo mostró 16 incidencias, sin avisos nuevos.
+
 Las demás soluciones se incorporarán tras comprobar cada corrección.
 
 ## 5. Resumen de las correcciones
@@ -119,6 +129,7 @@ Las demás soluciones se incorporarán tras comprobar cada corrección.
 | 4 | `java:S2201` | Adrián Martínez Zamora | `P1 - S2201 - Conservar el resultado de la concatenación` | Resuelta; 20 → 19 incidencias |
 | 5 | `java:S1197` | Adrián Martínez Zamora | `P1 - S1197 - Corregir declaración del arreglo de puntos` | Resuelta; 19 → 18 incidencias |
 | 6 | `java:S1197` | Adrián Martínez Zamora | `P1 - S1197 - Corregir declaración de argumentos` | Resuelta; 18 → 17 incidencias |
+| 7 | `java:S4973` | Adrián Martínez Zamora | `P1 - S4973 - Comprobar si la cadena está vacía` | Resuelta; 17 → 16 incidencias |
 
 ## 6. Análisis final
 
