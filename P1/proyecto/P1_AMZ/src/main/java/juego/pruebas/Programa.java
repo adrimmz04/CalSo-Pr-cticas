@@ -14,8 +14,11 @@ public class Programa {
       
       String info = ""; 
 
-      for (Punto punto : puntos)
-          info.concat(punto.toString());
+      for (Punto punto : puntos) {
+          if (punto != null) {
+              info = info.concat(punto.toString());
+          }
+      }
 
      String mensaje = (info == "") ? "no hay puntos" : info; 
 
