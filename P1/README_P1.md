@@ -187,6 +187,16 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Solución adoptada.** Se renombró a `situacionRelativa`; no existían llamadas que actualizar. El análisis completo mostró 9 incidencias, sin avisos nuevos.
 
+### Disconformidad 15 — `java:S100`
+
+**Localización inicial:** `src/main/java/juego/geometria/Punto.java`, línea 51.  
+**Responsable:** Adrián Martínez Zamora.  
+**Commit:** `P1 - S100 - Renombrar adyacente y su llamada`.
+
+**Problema detectado.** El método `Adyacente` comenzaba con mayúscula y no seguía la convención de nombres de métodos Java.
+
+**Solución adoptada.** Se renombró a `adyacente` y se actualizó su llamada desde `isAdyacente`. El análisis completo mostró 8 incidencias, sin avisos nuevos.
+
 Las demás soluciones se incorporarán tras comprobar cada corrección.
 
 ## 5. Resumen de las correcciones
@@ -207,6 +217,7 @@ Las demás soluciones se incorporarán tras comprobar cada corrección.
 | 12 | `java:S1905` | Adrián Martínez Zamora | `P1 - S1905 - Eliminar conversión redundante en equals` | Resuelta; 12 → 11 incidencias |
 | 13 | `java:S1201` | Adrián Martínez Zamora | `P1 - S1201 - Implementar igualdad y hashCode de Punto` | Resuelta; 11 → 10 incidencias |
 | 14 | `java:S100` | Adrián Martínez Zamora | `P1 - S100 - Renombrar situacionRelativa` | Resuelta; 10 → 9 incidencias |
+| 15 | `java:S100` | Adrián Martínez Zamora | `P1 - S100 - Renombrar adyacente y su llamada` | Resuelta; 9 → 8 incidencias |
 
 ## 6. Análisis final
 
