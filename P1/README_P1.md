@@ -167,6 +167,16 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Solución adoptada.** Se asignó `obj` directamente a `other`. El análisis completo mostró 11 incidencias, sin avisos nuevos. La firma de `equals` se corrige por separado en la disconformidad 13.
 
+### Disconformidad 13 — `java:S1201`
+
+**Localización inicial:** `src/main/java/juego/geometria/Punto.java`, línea 126.  
+**Responsable:** Adrián Martínez Zamora.  
+**Commit:** `P1 - S1201 - Implementar igualdad y hashCode de Punto`.
+
+**Problema detectado.** `equals(Punto)` no sobrescribía `Object.equals(Object)` y podía dar resultados distintos según el tipo estático de la referencia.
+
+**Solución adoptada.** Se sobrescribió `equals(Object)`, se comprobó el tipo de forma segura y se añadió un `hashCode()` coherente con las coordenadas comparadas. El análisis completo mostró 10 incidencias, sin avisos nuevos.
+
 Las demás soluciones se incorporarán tras comprobar cada corrección.
 
 ## 5. Resumen de las correcciones
@@ -185,6 +195,7 @@ Las demás soluciones se incorporarán tras comprobar cada corrección.
 | 10 | `java:S108` | Adrián Martínez Zamora | `P1 - S2975 S108 S2225 - Usar constructor de copia en Punto` | Resuelta; junto con 9 y 11 |
 | 11 | `java:S2975` | Adrián Martínez Zamora | `P1 - S2975 S108 S2225 - Usar constructor de copia en Punto` | Resuelta; 15 → 12 incidencias |
 | 12 | `java:S1905` | Adrián Martínez Zamora | `P1 - S1905 - Eliminar conversión redundante en equals` | Resuelta; 12 → 11 incidencias |
+| 13 | `java:S1201` | Adrián Martínez Zamora | `P1 - S1201 - Implementar igualdad y hashCode de Punto` | Resuelta; 11 → 10 incidencias |
 
 ## 6. Análisis final
 
