@@ -197,6 +197,16 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Solución adoptada.** Se renombró a `adyacente` y se actualizó su llamada desde `isAdyacente`. El análisis completo mostró 8 incidencias, sin avisos nuevos.
 
+### Disconformidad 16 — `java:S1124`
+
+**Localización inicial:** `src/main/java/juego/geometria/Punto.java`, línea 11.  
+**Responsable:** Adrián Martínez Zamora.  
+**Commit:** `P1 - S1124 - Ordenar modificadores de la constante`.
+
+**Problema detectado.** La declaración de `defaultValue` usaba `public final static`, fuera del orden habitual de Java.
+
+**Solución adoptada.** Se cambió a `public static final`. El análisis completo mostró 7 incidencias, sin avisos nuevos.
+
 Las demás soluciones se incorporarán tras comprobar cada corrección.
 
 ## 5. Resumen de las correcciones
@@ -218,6 +228,7 @@ Las demás soluciones se incorporarán tras comprobar cada corrección.
 | 13 | `java:S1201` | Adrián Martínez Zamora | `P1 - S1201 - Implementar igualdad y hashCode de Punto` | Resuelta; 11 → 10 incidencias |
 | 14 | `java:S100` | Adrián Martínez Zamora | `P1 - S100 - Renombrar situacionRelativa` | Resuelta; 10 → 9 incidencias |
 | 15 | `java:S100` | Adrián Martínez Zamora | `P1 - S100 - Renombrar adyacente y su llamada` | Resuelta; 9 → 8 incidencias |
+| 16 | `java:S1124` | Adrián Martínez Zamora | `P1 - S1124 - Ordenar modificadores de la constante` | Resuelta; 8 → 7 incidencias |
 
 ## 6. Análisis final
 
