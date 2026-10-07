@@ -57,6 +57,16 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Solución adoptada.** Se creó una única instancia `private static final Random RANDOM` en `Direccion` y el método la reutiliza. El nuevo análisis del proyecto completo mostró 22 incidencias: desapareció `java:S2119` y no aparecieron otras nuevas.
 
+### Disconformidad 2 — `java:S1197`
+
+**Localización inicial:** `src/main/java/juego/geometria/Direccion.java`, línea 19.  
+**Responsable:** Adrián Martínez Zamora.  
+**Commit:** `P1 - S1197 - Corregir declaración del arreglo de direcciones`.
+
+**Problema detectado.** Los corchetes del arreglo estaban junto al nombre `arrayDirecciones` en lugar de junto al tipo.
+
+**Solución adoptada.** Se cambió la declaración a `Direccion[] arrayDirecciones`. El nuevo análisis del proyecto completo mostró 21 incidencias: desapareció este aviso y no aparecieron otros nuevos.
+
 Las demás soluciones se incorporarán tras comprobar cada corrección.
 
 ## 5. Resumen de las correcciones
@@ -64,6 +74,7 @@ Las demás soluciones se incorporarán tras comprobar cada corrección.
 | Nº | Regla Sonar | Responsable | Commit | Resultado |
 |---:|---|---|---|---|
 | 1 | `java:S2119` | Adrián Martínez Zamora | `P1 - S2119 - Reutilizar generador aleatorio` | Resuelta; 23 → 22 incidencias |
+| 2 | `java:S1197` | Adrián Martínez Zamora | `P1 - S1197 - Corregir declaración del arreglo de direcciones` | Resuelta; 22 → 21 incidencias |
 
 ## 6. Análisis final
 
