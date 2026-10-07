@@ -157,6 +157,16 @@ La tabla reproduce los avisos del análisis inicial. Las líneas corresponden al
 
 **Solución adoptada.** Se conservó el constructor de copia y se retiró `clone()` completo. El análisis del proyecto pasó de 15 a 12 incidencias, sin avisos nuevos. Las tres disconformidades procedían del mismo método y desaparecieron juntas.
 
+### Disconformidad 12 — `java:S1905`
+
+**Localización inicial:** `src/main/java/juego/geometria/Punto.java`, línea 130.  
+**Responsable:** Adrián Martínez Zamora.  
+**Commit:** `P1 - S1905 - Eliminar conversión redundante en equals`.
+
+**Problema detectado.** El parámetro de `equals(Punto)` ya era un `Punto`, por lo que convertirlo de nuevo a ese tipo no tenía efecto.
+
+**Solución adoptada.** Se asignó `obj` directamente a `other`. El análisis completo mostró 11 incidencias, sin avisos nuevos. La firma de `equals` se corrige por separado en la disconformidad 13.
+
 Las demás soluciones se incorporarán tras comprobar cada corrección.
 
 ## 5. Resumen de las correcciones
@@ -174,6 +184,7 @@ Las demás soluciones se incorporarán tras comprobar cada corrección.
 | 9 | `java:S2225` | Adrián Martínez Zamora | `P1 - S2975 S108 S2225 - Usar constructor de copia en Punto` | Resuelta; junto con 10 y 11 |
 | 10 | `java:S108` | Adrián Martínez Zamora | `P1 - S2975 S108 S2225 - Usar constructor de copia en Punto` | Resuelta; junto con 9 y 11 |
 | 11 | `java:S2975` | Adrián Martínez Zamora | `P1 - S2975 S108 S2225 - Usar constructor de copia en Punto` | Resuelta; 15 → 12 incidencias |
+| 12 | `java:S1905` | Adrián Martínez Zamora | `P1 - S1905 - Eliminar conversión redundante en equals` | Resuelta; 12 → 11 incidencias |
 
 ## 6. Análisis final
 
